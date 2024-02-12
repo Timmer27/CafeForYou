@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CafeForYou</string>
+    <string name="kakao_app_key">dd132b3425d39ffcd25fb151c3a2f670</string>
 </resources>

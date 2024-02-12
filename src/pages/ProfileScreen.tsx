@@ -1,92 +1,76 @@
 import React from 'react';
-import {Pressable, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import Icon from 'react-native-vector-icons/Entypo';
+import {
+  AppContainer,
+  InfoBoxWrapper,
+  HighlightedBoldText,
+  DescText,
+  PressedText,
+  TextLabel,
+} from '../styles/AppStyle';
 
 export function ProfileScreen(): React.JSX.Element {
   return (
-    <View
-      style={{
-        display: 'flex',
-        marginTop: 20,
-        marginLeft: 20,
-        marginRight: 20,
-        marginBottom: 20,
-        minHeight: 80,
-      }}>
+    <AppContainer>
       <View>
-        <Text>이종호님</Text>
+        <HighlightedBoldText>이종호님</HighlightedBoldText>
       </View>
       {/* 상단 헤더 */}
-      <View
-        style={{
-          borderWidth: 1,
-          borderColor: 'black',
-          display: 'flex',
-          flexDirection: 'row',
-        }}>
+      <InfoBoxWrapper flexDirection="row" style={{alignItems: 'center', display: 'flex'}}>
         <View>
-          <Text>가입한 서비스</Text>
-          <Text>드립백 정기 구독</Text>
+          <DescText customColor={'#7A7A7A'}>
+            가입한 서비스
+          </DescText>
+          <HighlightedBoldText customMarginBottom={'0%'}
+           >
+            드립백 정기 구독
+          </HighlightedBoldText>
         </View>
-        <View>
+        <View
+          style={{
+            display: 'flex',
+          }}>
+          <Icon name="text-document" size={15} />
           <Text>결제 내역</Text>
-          <Text>icon</Text>
         </View>
-      </View>
-      {/* 광고 배너 */}
-      <View
+      </InfoBoxWrapper>
+      {/* <View
         style={{
-          marginTop: 20,
-          marginLeft: 20,
-          marginRight: 20,
           marginBottom: 20,
           borderWidth: 1,
           borderColor: 'black',
+          width: '100%',
         }}>
         <Pressable>
           <Text>최애 커피목록 등등</Text>
         </Pressable>
-      </View>
-      <View
-        style={{
-          marginTop: 20,
-          marginLeft: 20,
-          marginRight: 20,
-          marginBottom: 20,
-          borderWidth: 1,
-          borderColor: 'black',
-        }}>
-        <View>
-          <Text>개인정보</Text>
-        </View>
-        <View>
-          <Text>결제수단 관리</Text>
-        </View>
-        <View>
-          <Text>주문 내역</Text>
-        </View>
-      </View>
-      <View
-        style={{
-          marginTop: 20,
-          marginLeft: 20,
-          marginRight: 20,
-          marginBottom: 20,
-          borderWidth: 1,
-          borderColor: 'black',
-        }}>
-        <View>
-          <Text>공지사항</Text>
-        </View>
-        <View>
-          <Text>고객센터 문의</Text>
-        </View>
-        <View>
-          <Text>자주하는 질문</Text>
-        </View>
-        <View>
-          <Text>구독취소</Text>
-        </View>
-      </View>
-    </View>
+      </View> */}
+      <InfoBoxWrapper>
+        <PressedText>
+          <TextLabel>개인정보</TextLabel>
+        </PressedText>
+        <PressedText>
+          <TextLabel>결제수단 관리</TextLabel>
+        </PressedText>
+        <PressedText>
+          <TextLabel>주문 내역</TextLabel>
+        </PressedText>
+        <PressedText>
+          <TextLabel>공지사항</TextLabel>
+        </PressedText>
+        <PressedText>
+          <TextLabel>고객센터 문의</TextLabel>
+        </PressedText>
+        <PressedText>
+          <TextLabel>자주하는 질문</TextLabel>
+        </PressedText>
+        <PressedText>
+          <TextLabel>구독취소</TextLabel>
+        </PressedText>
+      </InfoBoxWrapper>
+      {/* <InfoBoxWrapper>
+      </InfoBoxWrapper> */}
+    </AppContainer>
   );
 }

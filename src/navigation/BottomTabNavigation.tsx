@@ -4,6 +4,7 @@ import {HomeScreen} from '../pages/HomeScreen';
 import {ProfileScreen} from '../pages/ProfileScreen';
 import {StoreScreen} from '../pages/StoreScreen';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Login from '../pages/Login';
 // import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Tab = createBottomTabNavigator();
@@ -25,6 +26,7 @@ export default function BottomTabNavigation() {
       <Tab.Screen
         name="홈"
         component={HomeScreen}
+        // component={Login}
         options={{title: '홈', headerShown: false}}
       />
       <Tab.Screen

@@ -39,7 +39,7 @@ export function StoreScreen(): React.JSX.Element {
       <View
         style={{
           minHeight: 100,
-          backgroundColor: 'white',
+          backgroundColor: 'white', 
         }}>
         <Text>광고 슬라이딩 이미지</Text>
       </View>
