@@ -1,7 +1,10 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Pressable, Text, View} from 'react-native';
 import {HomeScreen} from '../pages/HomeScreen';
-import { ProfileScreen } from '../pages/ProfileScreen';
+import {ProfileScreen} from '../pages/ProfileScreen';
+import {StoreScreen} from '../pages/StoreScreen';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+// import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,9 +28,17 @@ export default function BottomTabNavigation() {
         options={{title: '홈', headerShown: false}}
       />
       <Tab.Screen
-        name="세팅"
-        component={SettingsScreen}
-        //   options={/*생략*/}
+        name="커피 스토어"
+        component={StoreScreen}
+        options={{
+          headerShown: false,
+          tabBarBadge: 3,
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color, size}) => (
+            <Icon name="rocket" size={30} color="#900" />
+            // <Icon name='chervon-right' size={16} color='#000' />
+          ),
+        }}
       />
       <Tab.Screen
         name="세팅2"
